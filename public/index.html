@@ -9,6 +9,9 @@
     <meta name="google-signin-client_id" content="667213072482-l5kh0l4t6ofue9aktgvg36m0afi2lq2u.apps.googleusercontent.com">
 </head> 	
 <body>
+
+    <!-- <img src="http://localhost:3000/imagen/usuario/5b64e69b3c5c24112066a24e-965.jpg?token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c3VhcmlvIjp7InJvbGUiOiJVU0VSX1JPTEUiLCJlc3RhZG8iOnRydWUsImdvb2dsZSI6ZmFsc2UsIl9pZCI6IjViNjRlN2M1M2M1YzI0MTEyMDY2YTI1ZSIsIm5vbWJyZSI6IkZlbGlwZSBDb3V0aW5obyIsImVtYWlsIjoiZmVsaXBlMTBAZ21haWwuY29tIiwiX192IjowfSwiaWF0IjoxNTM2MTg4NDczLCJleHAiOjE1MzYzNjEyNzN9.q69S0hW1G7yMZCQfHBTWQjEjyPXIzBSQ0PtHVliRnks" alt=""> -->
+
     <div class="g-signin2" data-onsuccess="onSignIn" data-theme="dark"></div>
 
     <a href="#" onclick="signOut();">Sign out</a>
@@ -30,7 +33,6 @@
         console.log('Email: ' + profile.getEmail()); // This is null if the 'email' scope is not present.
 
         var id_token = googleUser.getAuthResponse().id_token;
-        console.log(id_token)
 
         var xhr = new XMLHttpRequest();
         xhr.open('POST', '/google');
